@@ -1,0 +1,190 @@
+/* Marketo form styled to resemble Bootstrap 5 forms and match custom button */
+
+/* Form container styling */
+.mktoForm {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: none;
+  color: var(--navy, #192954);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Ensure wrappers and fields are full width and NO extra spacing */
+.mktoFormRow,
+.mktoFieldWrap,
+.mktoFieldDescriptor,
+.mktoFormCol,
+.mktoGutter,
+.mktoOffset,
+.mktoForm td,
+.mktoForm tr {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  float: none !important;
+  display: block !important;
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Tighter field spacing */
+.mktoField,
+.mktoField textarea,
+.mktoField select {
+  margin-bottom: 1rem  !important;
+  padding-bottom: 0 !important;
+}
+
+/* Table spacing fix */
+.mktoForm table {
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+}
+
+/* Hide labels and asterisks */
+.mktoLabel,
+.mktoAsterix {
+  display: none !important;
+}
+.mktoRequiredField .mktoLabel::after {
+  content: none !important;
+}
+
+/* Form fields styling */
+.mktoField,
+.mktoField textarea,
+.mktoField select {
+  background: #fff !important;
+  border-radius: 0.375rem !important;
+  border: 1px solid #ced4da !important;
+  color: var(--navy, #192954) !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  outline: none !important;
+  padding: 0.5rem 0.9rem !important;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  display: block !important;
+}
+.mktoField textarea {
+  resize: vertical !important;
+  min-height: 80px !important;
+}
+.mktoField select {
+  min-height: 2.5em !important;
+}
+.mktoField:focus,
+.mktoField textarea:focus,
+.mktoField select:focus {
+  border-color: #86b7fe !important;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.18) !important;
+}
+
+/* Error message styling */
+.mktoForm .mktoError {
+  color: #dc3545 !important;
+  font-size: 0.95rem !important;
+  margin-top: 0.3rem !important;
+}
+
+/* Button row and button styling */
+.mktoForm .mktoButtonRow {
+  margin-top: 0 !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+.mktoForm .mktoButton {
+  background: transparent !important;
+  color: var(--navy, #192954) !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  padding: 1.1rem 2.2rem !important;
+  border: 2px solid var(--red, #ff0042) !important;
+  border-radius: 2rem !important;
+  cursor: pointer !important;
+  box-shadow: var(--shadow, 0 2px 16px rgba(25,41,84,0.08)) !important;
+  transition: background 0.18s, border-color 0.18s !important;
+  text-decoration: none !important;
+  margin-bottom: 0.2 !important;
+  letter-spacing: 0.02em !important;
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.mktoForm .mktoButton:hover,
+.mktoForm .mktoButton:focus {
+  background: var(--red, #ff0042) !important;
+  color: var(--white, #fff) !important;
+  border-color: var(--white, #fff) !important;
+  outline: none !important;
+}
+
+/* Hide mktoClear */
+.mktoClear {
+  display: none !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  line-height: 0 !important;
+}
+
+/* Checkbox and radio styling for Bootstrap look */
+.mktoForm input[type="checkbox"],
+.mktoForm input[type="radio"] {
+  accent-color: #0d6efd !important;
+  width: 1.1em !important;
+  height: 1.1em !important;
+  vertical-align: middle !important;
+  margin-right: 0.4em !important;
+}
+.mktoForm .mktoCheckboxList,
+.mktoForm .mktoRadioList {
+  margin: 0.3em 0 0.6em 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  font-size: 1rem !important;
+  color: var(--navy, #192954) !important;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .mktoForm {
+    padding: 1rem 0.5rem !important;
+    border-radius: 0.5rem !important;
+    box-shadow: none !important;
+  }
+  .mktoFormRow {
+    margin-bottom: 0.6rem !important;
+  }
+  .mktoForm .mktoButton {
+    font-size: 1rem !important;
+    padding: 0.9rem 1.2rem !important;
+  }
+}
+
+.mktoFormRow:has(input[type="hidden"]:only-child) {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  display: none !important;
+}
+.mktoForm input[type="hidden"].mktoField {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}

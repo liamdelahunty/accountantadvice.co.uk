@@ -1,0 +1,328 @@
+
+/* Marketo form styled to resemble Bootstrap 5 forms (full width, no shadow, labels hidden, correct line-height) */
+
+.mktoForm {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: none;
+  color: var(--navy, #192954);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.mktoFormRow,
+.mktoFieldDescriptor,
+.mktoFormCol,
+.mktoFieldWrap,
+.mktoGutter,
+.mktoOffset {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  float: none !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+.mktoLabel {
+  display: none !important;
+}
+
+.mktoAsterix {
+  display: none !important;
+}
+
+.mktoRequiredField .mktoLabel::after {
+  content: none !important;
+}
+
+.mktoField,
+.mktoField textarea,
+.mktoField select {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  padding: 0.5rem 0.9rem !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important; /* Bootstrap-like line height */
+  border: 1px solid #ced4da !important;
+  border-radius: 0.375rem !important;
+  background: #fff !important;
+  color: var(--navy, #192954) !important;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+.mktoField textarea {
+  resize: vertical !important;
+  min-height: 80px !important;
+}
+
+.mktoField select {
+  min-height: 2.5em !important;
+}
+
+.mktoField:focus,
+.mktoField textarea:focus,
+.mktoField select:focus {
+  border-color: #86b7fe !important;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.18) !important;
+}
+
+.mktoForm .mktoError {
+  color: #dc3545 !important;
+  font-size: 0.95rem !important;
+  margin-top: 0.3rem !important;
+}
+
+.mktoForm .mktoButtonRow {
+  margin-top: 2rem !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.mktoForm .mktoButton {
+  background: #0d6efd !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+  padding: 0.6rem 1.5rem !important;
+  border: none !important;
+  border-radius: 0.375rem !important;
+  cursor: pointer !important;
+  transition: background 0.18s, box-shadow 0.18s !important;
+  box-shadow: none !important;
+  margin-bottom: 1rem !important;
+  margin-right: 1rem !important;
+  display: inline-block !important;
+}
+
+.mktoForm .mktoButton:hover,
+.mktoForm .mktoButton:focus {
+  background: #0b5ed7 !important;
+  box-shadow: none !important;
+}
+
+.mktoClear {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+@media (max-width: 600px) {
+  .mktoForm {
+    padding: 1rem 0.5rem !important;
+    border-radius: 0.5rem !important;
+    box-shadow: none !important;
+  }
+  .mktoFormRow {
+    margin-bottom: 0.8rem !important;
+  }
+  .mktoForm .mktoButton {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.95rem !important;
+    border-radius: 0.375rem !important;
+  }
+}
+
+/* Checkbox and radio styling for Bootstrap look */
+.mktoForm input[type="checkbox"],
+.mktoForm input[type="radio"] {
+  accent-color: #0d6efd !important;
+  width: 1.1em !important;
+  height: 1.1em !important;
+  vertical-align: middle !important;
+  margin-right: 0.4em !important;
+}
+
+.mktoForm .mktoCheckboxList,
+.mktoForm .mktoRadioList {
+  margin: 0.3em 0 0.6em 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  font-size: 1rem !important;
+  color: var(--navy, #192954) !important;
+}
+
+.mktoForm .mktoButton {
+  background: transparent !important;
+  color: var(--white) !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  padding: 1.1rem 2.2rem !important;
+  border: 2px solid var(--red) !important;
+  border-radius: 2rem !important;
+  cursor: pointer !important;
+  box-shadow: var(--shadow) !important;
+  transition: background 0.18s !important;
+  text-decoration: none !important;
+  margin-right: 1rem !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: 0.02em !important;
+  display: inline-block !important;
+  width: 100% !important; /* For w-100 effect */
+  box-sizing: border-box !important;
+}
+
+.mktoForm .mktoButton:hover,
+.mktoForm .mktoButton:focus {
+  background: var(--red) !important;
+  color: var(--white) !important;
+  border-color: var(--white) !important;
+  outline: none !important;
+}
+
+/* If you want to use btn-tertiary coloring too: */
+
+
+.mktoForm .mktoButton {
+  background: transparent !important;
+  color: var(--white, #fff) !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  padding: 1.1rem 2.2rem !important;
+  border: 2px solid var(--red, #ff0042) !important;
+  border-radius: 2rem !important;
+  cursor: pointer !important;
+  box-shadow: var(--shadow, 0 2px 16px rgba(25,41,84,0.08)) !important;
+  transition: background 0.18s !important;
+  text-decoration: none !important;
+  margin-right: 0 !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: 0.02em !important;
+  display: block !important;
+  width: 50% !important;           /* Button is half the form's width */
+  margin-left: 25% !important;     /* Offset by 25% (centered) */
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.mktoForm .mktoButton.btn-tertiary {
+  color: var(--dark-grey) !important;
+}
+.mktoForm .mktoButton.btn-tertiary:hover,
+.mktoForm .mktoButton.btn-tertiary:focus {
+  color: var(--white) !important;
+  border-color: var(--dark-grey) !important;
+}
+
+.mktoForm .mktoButton:hover,
+.mktoForm .mktoButton:focus {
+  background: var(--red, #ff0042) !important;
+  color: var(--white, #fff) !important;
+  border-color: var(--white, #fff) !important;
+  outline: none !important;
+}
+
+/* Tighter Marketo field spacing */
+.mktoFormRow,
+tr.mktoFormRow,
+.mktoForm td,
+.mktoForm tr {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.mktoFormRow {
+  margin-bottom: 0.3rem !important;
+}
+
+.mktoForm td {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+}
+
+.mktoField,
+.mktoField textarea,
+.mktoField select {
+  margin-bottom: 0.3rem !important;
+}
+
+.mktoFieldWrap,
+.mktoFieldDescriptor,
+.mktoFormCol,
+.mktoGutter,
+.mktoOffset {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.mktoForm table {
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+}
+
+.mktoForm tr,
+.mktoForm td {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* AGGRESSIVE Marketo field spacing override */
+.mktoFormRow,
+tr.mktoFormRow,
+.mktoForm td,
+.mktoForm tr,
+.mktoField,
+.mktoFieldWrap,
+.mktoFieldDescriptor,
+.mktoFormCol,
+.mktoGutter,
+.mktoOffset {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.mktoFormRow {
+  margin-bottom: 0.25rem !important;
+}
+
+.mktoField,
+.mktoField textarea,
+.mktoField select {
+  margin-bottom: 0.25rem !important;
+}
+
+.mktoForm table,
+.mktoForm tr,
+.mktoForm td {
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.mktoClear {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  line-height: 0 !important;
+}
