@@ -293,7 +293,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
 
   function updatePhoneLinks() {
-    if (window.innerWidth >= 992) {
+    if (window.innerWidth >= 576) {
       phoneLinks.forEach(link => {
         link.setAttribute('data-bs-toggle', 'modal');
         link.setAttribute('data-bs-target', '#phoneModal');
