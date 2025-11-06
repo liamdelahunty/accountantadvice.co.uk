@@ -1,0 +1,8 @@
+
+- `index-v0.html`: This file is the original `accountant-advice.html` and is vastly different from the current `index.html`. It seems to be a much earlier version of the page. It has a different structure, different text, and uses placeholder images.
+- `index-v1.html`: This file introduces a 2-column layout in the hero section, with the form on the right side on larger screens. It also adds a Google Reviews rating and uses SVGs for the badges instead of placeholder images. The image paths are also updated to be relative.
+- `index-v2.html`: This file makes the form fields 2-column within the form itself. It also includes some JavaScript to handle the 2-column layout.
+- `index-v3.html`: This file introduces a carousel for the "Why Accountants Partner With Us" section. It also has a different footer layout.
+- `index-v4.html`: This file replaces the Marketo form with a Landbot chatbot.
+- `index-v5.html`: This file makes the "Book your FREE consultation NOW" button in the hero section a modal trigger, opening a modal with the form in it.
+- `index-v6.html`: This file seems to be a revert of some changes, it is very similar to `index-v3.html`. It has the carousel and the updated footer.
