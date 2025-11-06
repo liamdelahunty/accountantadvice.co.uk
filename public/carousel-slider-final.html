@@ -430,7 +430,7 @@
   font-size: 0.9rem !important;
   margin-top: 0.5rem !important;             /* Space above error */
   margin-bottom: 0.5rem !important;          /* Space below error */
-  padding: 0.6rem 1rem !important;           /* Padding for readability */
+  padding: 0.6rem 1rem !important;
   z-index: 10 !important;
   max-width: 100% !important;
   width: auto !important;
@@ -439,7 +439,7 @@
 
 .mktoErrorArrowWrap,
 .mktoErrorArrow {
-  display: none !important;                  /* Hide triangle arrow, use box style */
+  display: none !important;
 }
 
 .mktoErrorMsg {
@@ -455,7 +455,6 @@
 
 .mktoError[role="alert"] {
   outline: none !important;
-  /* For accessibility, you may want to add a colored left border */
   border-left: 4px solid var(--red) !important;
 }
 
@@ -509,7 +508,8 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 15px; /* Increased padding for larger buttons */
+    font-size: 24px; /* Increased font size for larger arrows */
     cursor: pointer;
     z-index: 1;
 }
@@ -666,7 +666,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card h-100 shadow-sm">
                       <img src="imgs/badges/property.svg" class="card-img-top" alt="Property" />
                         <div class="card-body">
-                            <h3 class="card-title fs-5 text-cyan">Property</h3>
+                            <h3 class="card-title fs-5 text-cyan">Expert Guidance on Complex Property Tax</h3>
                             <p class="card-text balance">
                                 This is a complex area that often involves considering several different taxes. Whether it be a property business incorporation, settling property into trust to plan for inheritance tax, Family Investment Company share structures, VAT advice on property transactions, or SDLT advice, Croner-i’s My VIP Tax Team is able to support you.
                             </p>
@@ -677,7 +677,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card h-100 shadow-sm">
                       <img src="imgs/badges/exit-planning.svg" class="card-img-top" alt="Exit planning" />
                         <div class="card-body">
-                            <h3 class="card-title fs-5 text-navy">Exit planning</h3>
+                            <h3 class="card-title fs-5 text-navy">Strategic Exit Planning for Business Owners</h3>
                             <p class="card-text balance">
                                 This is a key life decision for many business owners. Typical exits can include - a sale to a third party, an earn out, a company purchase of own shares, a management buy-out, and sale to an employee ownership trust. Whatever your clients’ exit strategy, there will always be important tax and VAT considerations.
                             </p>
@@ -688,7 +688,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card h-100 shadow-sm">
                       <img src="imgs/badges/inheritance-tax-and-trusts.svg" class="card-img-top" alt="Inheritance tax and trusts" />
                       <div class="card-body">
-                            <h3 class="card-title fs-5 text-cyan">Inheritance tax and trusts</h3>
+                            <h3 class="card-title fs-5 text-cyan">Navigating Inheritance Tax and Trusts</h3>
                             <p class="card-text balance">
                                 Passing on wealth to the next generation is a highly important area. With the changes announced in the October 2024 budget, we have seen a huge demand for inheritance tax advice for farmers and owners of high value trading companies. With the pension changes and predictions for the forthcoming budget on 26 November 2025, we are certain that demand for inheritance tax advice will continue to rise.
                             </p>
@@ -699,7 +699,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card h-100 shadow-sm">
                       <img src="imgs/badges/restructuring.svg" class="card-img-top" alt="Restructuring" />
                         <div class="card-body">
-                            <h3 class="card-title fs-5 text-navy">Restructuring</h3>
+                            <h3 class="card-title fs-5 text-navy">Optimising Businesses with Corporate Restructuring</h3>
                             <p class="card-text balance">
                                 Having the right corporate structure is essential regardless of your client’s current position and aspirations. We provide a huge amount of restructuring advice and tax implementation for everything from putting in a new holding company to a return of capital demerger partition.
                             </p>
@@ -707,6 +707,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </div>
+            <!-- How to use a graphic instead of text arrows:
+                 Replace the text content (&#10094; and &#10095;) with an <img> tag.
+                 Example for previous button:
+                 <button class="carousel-button prev"><img src="path/to/your/prev-arrow.png" alt="Previous"></button>
+                 Example for next button:
+                 <button class="carousel-button next"><img src="path/to/your/next-arrow.png" alt="Next"></button>
+                 Ensure your images are appropriately sized and styled with CSS if needed.
+            -->
             <button class="carousel-button prev">&#10094;</button>
             <button class="carousel-button next">&#10095;</button>
         </div>

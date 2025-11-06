@@ -49,19 +49,13 @@
       --mid-grey: #a7a9ab;
       --dark-grey: #424143;
       --shadow: 0 2px 16px rgba(25,41,84,0.08);
-      --rating-gold: #fbbc04;
-      --rating-color-hero: #ff0042;
-      --rating-zoom: 120%;
-      --rating-reviews-zoom: 90%;
-      --rating-grey: #dadce0; /* Google business profile grey #dadce0 */
     }
     .bg-navy { background-color: var(--navy) !important; }
-    .text-cyan { color: var(--cyan) !important; }
-    .text-dark-grey { color: var(--dark-grey) !important; }
+    .text-navy { color: var(--navy) !important; }
     .text-grey { color: var(--grey) !important; }
     .text-mid-grey { color: var(--mid-grey) !important; }
-    .text-navy { color: var(--navy) !important; }
-    .text-red { color: var(--red) !important; }
+    .text-dark-grey { color: var(--dark-grey) !important; }
+    .text-cyan { color: var(--cyan) !important; }
     .bg-dark-grey { background-color: var(--dark-grey) !important; }
     .bg-cyan { background-color: var(--cyan) !important; }
     .site-logo { max-height: 56px; }
@@ -184,32 +178,6 @@
         max-height: 46px;
       }
     }
-
-.rating-zoom {
-  zoom: var(--rating-zoom);
-}
-.rating-reviews-zoom {
-  zoom: var(--rating-reviews-zoom);
-}
-
-.grating {
-  font-family: Ariel, sans-serif;
-}
-
-.gstars .gstarsgrad { 
-    color: var(--rating-color);
-    clip-path: polygon(6px 0, 4.31px 3.98px, 0 4.34px, 3.28px 7.18px, 2.29px 11.4px, 6px 9.16px, 9.71px 11.4px, 8.72px 7.18px, 12px 4.34px, 7.69px 3.98px, 6px 0, 20px 0, 18.31px 3.98px, 14px 4.34px, 17.28px 7.18px, 16.29px 11.4px, 20px 9.16px, 23.71px 11.4px, 22.72px 7.18px, 26px 4.34px, 21.69px 3.98px, 20px 0, 34px 0, 32.31px 3.98px, 28px 4.34px, 31.28px 7.18px, 30.29px 11.4px, 34px 9.16px, 37.71px 11.4px, 36.72px 7.18px, 40px 4.34px, 35.69px 3.98px, 34px 0, 48px 0, 46.31px 3.98px, 42px 4.34px, 45.28px 7.18px, 44.29px 11.4px, 48px 9.16px, 51.71px 11.4px, 50.72px 7.18px, 54px 4.34px, 49.69px 3.98px, 48px 0, 62px 0, 60.31px 3.98px, 56px 4.34px, 59.28px 7.18px, 58.29px 11.4px, 62px 9.16px, 65.71px 11.4px, 64.72px 7.18px, 68px 4.34px, 63.69px 3.98px, 62px 0);
-    display: inline-block;
-    zoom: var(--rating-zoom);
-    width: 70px;  /* 68px; */
-    height: 11.4px; /* 11.4px; */
-  }
-
-.gstars {
-    display: inline-block;
-}
-
-
 /* Marketo form styled to resemble Bootstrap 5 forms and match custom button */
 
 /* Form container styling */
@@ -227,26 +195,9 @@
   box-sizing: border-box;
 }
 
-/* Two-column layout for form fields */
-.mktoForm .mktoFormRow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.mktoForm .mktoFieldWrap {
-    width: 48%;
-    margin-bottom: 1rem;
-}
-
-@media (max-width: 767px) {
-  .mktoForm .mktoFieldWrap {
-    width: 100%;
-  }
-}
-
 /* Ensure wrappers and fields are full width and NO extra spacing */
 .mktoFormRow,
+.mktoFieldWrap,
 .mktoFieldDescriptor,
 .mktoFormCol,
 .mktoGutter,
@@ -328,9 +279,9 @@
 
 /* Button row and button styling */
 .mktoForm .mktoButtonRow {
-    width: 100%; /* Ensure button spans full width */
-    text-align: center; /* Center the button */
-    margin-top: 1rem; /* Add some space above the button */
+  margin-top: 0 !important;
+  text-align: center !important;
+  width: 100% !important;
 }
 .mktoForm .mktoButton {
   background: transparent !important;
@@ -485,7 +436,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="bg-navy py-3 border-bottom">
   <div class="container d-flex align-items-center justify-content-between">
     <a href="https://www.accountantadvice.co.uk">
-      <img src="imgs/logos/accountant-advice-logo-2025-22.svg"
+      <img src="https://pages.croneri.co.uk/rs/463-YBC-525/images/accountant-advice-logo-2025-22.svg"
            alt="Accountant Advice Logo"
            class="site-logo"
            style="max-height: 56px; width: auto; min-width: 262px; display: block;" />
@@ -536,20 +487,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </a>
             <a href="#contact-form" class="rounded-outline-btn">Book your FREE consultation NOW</a>
           </div>
-
-          <div class="" data-attrid="subtitle">
-            <span style="margin-right:5px" class="rating-zoom grating" aria-hidden="true">4.5</span>
-            <span class="gstars" aria-label="Rated 4.5 out of 5 on Google (387)" role="img">
-              <span aria-hidden="true">
-                <span class="gstarsgrad" style="background:linear-gradient(to right, var(--rating-gold) 62px, var(--rating-grey)  0%)"></span>
-                <span class="rating-reviews-zoom grating">387 Google reviews</span>
-              </span>
-            </span>
-          </div>
-
+          <img class="hero-rating mt-3 mb-1" src="https://pages.croneri.co.uk/rs/463-YBC-525/images/google-ratings-44-score-white.png" alt="Rated 4.4 on Google">
         </div>
         <div class="col-lg-6 d-none d-lg-block text-center">
-          <img class="hero-img" src="imgs/heros/hero-banner-employer-advice-1-e1740482059223.webp" alt="Woman with phone" />
+          <img class="hero-img" src="https://pages.croneri.co.uk/rs/463-YBC-525/images/hero-banner-employer-advice-1-e1740482059223.webp" alt="Woman with phone" />
         </div>
       </div>
     </div>
@@ -565,7 +506,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="row g-4 justify-content-center mb-5 mb-sm-3">
         <div class="col-md-6 col-lg-3">
           <div class="card h-100 shadow-sm">
-            <img src="imgs/badges/trusted-by-7600-accountants.svg" class="card-img-top" alt="Trusted by 7,600+ Accountancy Practices" />
+            <img src="https://placehold.co/320x120/00c0ff/ffffff?text=7,600%2B" class="card-img-top" alt="Trusted by 7,600+ Accountancy Practices" />
             <div class="card-body">
               <h3 class="card-title fs-5 text-cyan">Trusted by the Nation's Accountants</h3>
               <p class="mb-0 balance" style="color: var(--mid-dark-grey);">
@@ -576,7 +517,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>          
         <div class="col-md-6 col-lg-3">
           <div class="card h-100 shadow-sm">
-            <img src="imgs/badges/630-years-experience.svg" class="card-img-top" alt="630+ years of collective tax experience" />
+            <img src="https://placehold.co/320x120/192954/f2f2f2?text=630%2B+Years" class="card-img-top" alt="630+ years of collective tax experience" />
             <div class="card-body">
               <h3 class="card-title fs-5 text-cyan">Collective Tax Experience</h3>
               <p class="mb-0 balance" style="color: var(--mid-dark-grey);">
@@ -587,7 +528,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="card h-100 shadow-sm">
-            <img src="imgs/badges/40-tax-audit-accounting-experts.svg" class="card-img-top" alt="40+ experts across tax, audit & accounting" />
+            <img src="https://placehold.co/320x120/a7a9ab/192954?text=40%2B+Experts" class="card-img-top" alt="40+ experts across tax, audit & accounting" />
             <div class="card-body">
               <h3 class="card-title fs-5 text-cyan">Across Tax, Audit & Accounting</h3>
               <p class="mb-0 balance" style="color: var(--mid-dark-grey);">
@@ -598,7 +539,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="card h-100 shadow-sm">
-            <img src="imgs/badges/2-point-6-million-pounds-value.svg" class="card-img-top" alt="£2.6M In combined team value" />
+            <img src="https://placehold.co/320x120/00c0ff/ffffff?text=£2.6M" class="card-img-top" alt="£2.6M In combined team value" />
             <div class="card-body">
               <h3 class="card-title fs-5 text-cyan">Combined Team Value</h3>
               <p class="mb-0 balance" style="color: var(--mid-dark-grey);">
@@ -634,45 +575,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <script src="https://pages.croneri.co.uk/js/forms2/js/forms2.min.js"></script>
             <form id="mktoForm_10621"></form>
-            <script>
-            MktoForms2.loadForm("https://pages.croneri.co.uk", "463-YBC-525", 10621, function(form){
-                var formElem = form.getFormElem()[0];
-                var fieldWraps = formElem.querySelectorAll('.mktoFieldWrap');
-                var submitButtonRow = formElem.querySelector('.mktoButtonRow');
-
-                var newRow = document.createElement('div');
-                newRow.className = 'mktoFormRow';
-
-                // Append field wraps to the new row
-                fieldWraps.forEach(function(field) {
-                    newRow.appendChild(field.cloneNode(true));
-                });
-
-                // Clear existing form content
-                while (formElem.firstChild) {
-                    formElem.removeChild(formElem.firstChild);
-                }
-
-                // Append the new row with fields
-                formElem.appendChild(newRow);
-
-                // Append the submit button row if it exists
-                if (submitButtonRow) {
-                    formElem.appendChild(submitButtonRow.cloneNode(true));
-                }
-            });
+            <script>MktoForms2.loadForm("https://pages.croneri.co.uk", "463-YBC-525", 10621);
             </script>
 
-           <div class="" data-attrid="subtitle">
-              <span style="margin-right:5px" class="rating-zoom grating" aria-hidden="true">4.5</span>
-              <span class="gstars" aria-label="Rated 4.5 out of 5 on Google (387)" role="img">
-                <span aria-hidden="true">
-                  <span class="gstarsgrad" style="background:linear-gradient(to right, var(--rating-gold) 62px, var(--rating-grey)  0%)"></span>
-                  <span class="rating-reviews-zoom grating">387 Google reviews</span>
-                </span>
-              </span>
-            </div>
-            
+            <img class="hero-rating mt-3 mb-1" src="https://pages.croneri.co.uk/rs/463-YBC-525/images/google-ratings-44-score-cyan.png" alt="Rated 4.4 on Google">
             <small class="d-block mt-3 text-muted text-center">We work only with UK-based accountants and accountancy firms. All information is kept strictly confidential and secure.</small>
             <hr>
             <small class="text-balance pretty">To handle your request, your details will be shared with Croner-i | </small>
@@ -718,7 +624,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-md-6 text-center">
-          <img class="value-img" src="imgs/heros/247-advice-high-1-e1740483166684.webp" alt="Expand Your Practice with Specialist Support" />
+          <img class="value-img" src="https://pages.croneri.co.uk/rs/463-YBC-525/images/247-advice-high-1-e1740483166684.webp" alt="Expand Your Practice with Specialist Support" />
         </div>
         <div class="col-md-6">
           <h2 class="fw-bold mb-3 text-navy">Grow Your Practice by Partnering With Our Specialist Accountant Service</h2>
@@ -862,7 +768,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </ul>
         </div>
         <div class="footer-col footer-brand mb-4 text-lg-end text-center w-100 w-lg-auto">
-          <a href="https://www.accountantadvice.co.uk"><img src="imgs/logos/accountant-advice-logo-2025-23.svg" alt="Accountant Advice Logo footer" /></a>
+          <a href="https://www.accountantadvice.co.uk"><img src="https://pages.croneri.co.uk/rs/463-YBC-525/images/accountant-advice-logo-2025-23.svg" alt="Accountant Advice Logo footer" /></a>
         </div>
       </div>
       <div class="footer-bottom text-center border-top border-secondary pt-3 pb-2" style="color: var(--mid-grey);">
@@ -870,51 +776,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </footer>
-    
-<!-- Modal -->
-<div class="modal fade" id="phoneModal" tabindex="-1" aria-labelledby="phoneModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-navy" id="phoneModalLabel">We're available 24/7</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        <p>Get in touch with our experts and get your free consultation now.</p>
-        <p class="display-4 fw-bold text-red">020 4634 3688</p>
-        <p class from "form.html" to "index.html".="text-muted small">* Please note that we only provide advice to UK-based accountants and accountancy firms.</p>
-      </div>
-    </div>
-  </div>
-</div>
+  
 
-<!-- Bootstrap 5 JS Bundle CDN (for interactive components if needed) -->
-
+  <!-- Bootstrap 5 JS Bundle CDN (for interactive components if needed) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-
-  function updatePhoneLinks() {
-    if (window.innerWidth >= 576) {
-      phoneLinks.forEach(link => {
-        link.setAttribute('data-bs-toggle', 'modal');
-        link.setAttribute('data-bs-target', '#phoneModal');
-        link.removeAttribute('href');
-      });
-    } else {
-      phoneLinks.forEach(link => {
-        link.removeAttribute('data-bs-toggle');
-        link.removeAttribute('data-bs-target');
-        link.setAttribute('href', 'tel:02046343688');
-      });
-    }
-  }
-
-  updatePhoneLinks();
-  window.addEventListener('resize', updatePhoneLinks);
-</script>
-
-   
+  
 
 </body>
 </html>

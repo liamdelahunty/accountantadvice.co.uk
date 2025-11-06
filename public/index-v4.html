@@ -160,19 +160,19 @@
       color: var(--white);
     }      
     .footer-brand img {
-      width: 130px;
-      max-width: 100%;
-      max-height: 56px;
+      max-width: 260px;
+      height: auto;
       background: none;
       border-radius: 0.4em;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      left: 0px;
     }
+
     /* Responsive tweak for footer columns and logo centering */
     @media (max-width: 991.98px) {
       .footer-brand {
         margin-top: 2rem;
+        margin-bottom: 2rem;
         text-align: center !important;
         justify-content: center !important;
         width: 100% !important;
@@ -182,6 +182,10 @@
       .footer-brand img {
         max-width: 110px;
         max-height: 46px;
+      }
+      .footer-copyright {
+        margin-top: 2rem;
+        text-align: center;
       }
     }
 
@@ -208,6 +212,62 @@
 .gstars {
     display: inline-block;
 }
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card {
+    flex: 0 0 100%;
+    padding: 0 15px;
+}
+
+.card-body {
+  background-color: var(--grey);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+    .carousel-card {
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-card {
+        flex: 0 0 25%;
+    }
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px; /* Increased padding for larger buttons */
+    font-size: 24px; /* Increased font size for larger arrows */
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-button.prev {
+    left: 0px;
+}
+
+.carousel-button.next {
+    right: 0px;
+}
+
 
 
 /* Marketo form styled to resemble Bootstrap 5 forms and match custom button */
@@ -469,58 +529,6 @@
   }
 }
 
-.carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-card {
-    flex: 0 0 100%;
-    padding: 0 15px;
-}
-
-.card-body {
-  background-color: var(--grey);
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-    .carousel-card {
-        flex: 0 0 50%;
-    }
-}
-
-@media (min-width: 992px) {
-    .carousel-card {
-        flex: 0 0 25%;
-    }
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.carousel-button.prev {
-    left: 0px;
-}
-
-.carousel-button.next {
-    right: 0px;
-}
 
 
   </style>
@@ -562,47 +570,91 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-  <section class="py-5 bg-navy text-white">
+<section class="py-5 bg-grey " style="color: var(--navy);" id="contact-form">
     <div class="container">
-      <div class="row align-items-center g-4">
+      <div class="row align-items-center g-4 bg-grey rounded-3">
+        <div class="col-lg-6 text-center">
+          <div class="form-inner bg-white rounded p-4">
+            <h2 class="fw-bold mb-3 text-navy text-center text-decoration-underline">Book your FREE Consultation TODAY</h2>
+
+            <script src="https://pages.croneri.co.uk/js/forms2/js/forms2.min.js"></script>
+            <form id="mktoForm_10621"></form>
+            <script>
+            MktoForms2.loadForm("https://pages.croneri.co.uk", "463-YBC-525", 10621, function(form){
+                var formElem = form.getFormElem()[0];
+                var fieldWraps = formElem.querySelectorAll('.mktoFieldWrap');
+                var submitButtonRow = formElem.querySelector('.mktoButtonRow');
+
+                var newRow = document.createElement('div');
+                newRow.className = 'mktoFormRow';
+
+                // Append field wraps to the new row
+                fieldWraps.forEach(function(field) {
+                    newRow.appendChild(field.cloneNode(true));
+                });
+
+                // Clear existing form content
+                while (formElem.firstChild) {
+                    formElem.removeChild(formElem.firstChild);
+                }
+
+                // Append the new row with fields
+                formElem.appendChild(newRow);
+
+                // Append the submit button row if it exists
+                if (submitButtonRow) {
+                    formElem.appendChild(submitButtonRow.cloneNode(true));
+                }
+            });
+            </script>
+
+           <div class="" data-attrid="subtitle">
+              <span style="margin-right:5px" class="rating-zoom grating" aria-hidden="true">4.5</span>
+              <span class="gstars" aria-label="Rated 4.5 out of 5 on Google (387)" role="img">
+                <span aria-hidden="true">
+                  <span class="gstarsgrad" style="background:linear-gradient(to right, var(--rating-gold) 62px, var(--rating-grey)  0%)"></span>
+                  <span class="rating-reviews-zoom grating">387 Google reviews</span>
+                </span>
+              </span>
+            </div>
+            
+            <small class="d-block mt-3 text-muted text-center">We work only with UK-based accountants and accountancy firms. All information is kept strictly confidential and secure.</small>
+            <hr>
+            <small class="text-balance pretty">To handle your request, your details will be shared with Croner-i | </small>
+            <small class="mt-3 text-muted text-center"><a href="https://www.croneri.co.uk/privacy-policy" class="text-decoration-none" target="_blank">Privacy Policy</a></small>
+
+          </div>
+        </div>
+
         <div class="col-lg-6">
+          <h2 class="fw-bold mb-4 pretty" style="color: var(--navy);">Say Yes to Every Client - We'll Help You Deliver</h2>
+          <h3 class="fs-5 mb-4">Specialist Case Support for Accountants</h3>
+          <div class="mb-4">Our accountant-to-accountant support means you never have to turn away specialist work:</div>
+          <ul class="mb-4">
+            <li>Company restructuring</li>
+            <li>Complex VAT</li>
+            <li>Employee Ownership Trusts</li>
+            <li>Exit planning </li>
+            <li>Family Investment Companies</li>
+            <li>Inheritance tax</li>
+            <li>Property business incorporation</li>
+            <li>Property tax matters </li>
+            <li>R&D</li>
+            <li>Residency & domicile issues</li>
+            <li>Succession planning and Trusts</li>
+            <li>Tax Investigations</li>
+          </ul>
 
-          <h1 class="display-5 fw-bold mb-3 text-cyan" style="letter-spacing: -0.03em;">
-            Free Expert <span class="text-white">Tax and VAT</span> Advice for Accountants
-          </h1>
-          <p class="lead mb-2">
-            Are you seeing an influx of complex tax work this autumn? You’re not alone. Many accountants are finding their inboxes full of specialist cases that can’t wait.
-          </p>
-          <p class="lead mb-4">
-            Our team of 40+ senior consultants is ready to help you say yes to every client - without needing to be an expert in every area yourself.
-          </p>
-          <p class="lead mb-4">Expand your offering, grow your practice, and take on more complex clients with <b>Croner-i's</b> expert backup.</p>
-          <div class="d-flex flex-wrap">
-            <a onclick="gtag('event', 'conversion', {'send_to': 'AW-17544790194/cD9uCMzqwKYbELKBga5B'});" href="tel:02046343688" class="cta-btn d-inline-flex align-items-center">
-              <span class="me-2 d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-                </svg>
-              </span>
-              Call Us NOW
-            </a>
-            <a href="#contact-form" class="rounded-outline-btn">Book your FREE consultation NOW</a>
-          </div>
-
-          <div class="" data-attrid="subtitle">
-            <span style="margin-right:5px" class="rating-zoom grating" aria-hidden="true">4.5</span>
-            <span class="gstars" aria-label="Rated 4.5 out of 5 on Google (387)" role="img">
-              <span aria-hidden="true">
-                <span class="gstarsgrad" style="background:linear-gradient(to right, var(--rating-gold) 62px, var(--rating-grey)  0%)"></span>
-                <span class="rating-reviews-zoom grating">387 Google reviews</span>
-              </span>
+          <a onclick="gtag('event', 'conversion', {'send_to': 'AW-17544790194/cD9uCMzqwKYbELKBga5B'});" href="tel:02046343688" class="cta-btn d-inline-flex align-items-center">
+            <span class="me-2 d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+              </svg>
             </span>
-          </div>
+            Call Us NOW
+          </a>
 
-        </div>
-        <div class="col-lg-6 d-none d-lg-block text-center">
-          <img class="hero-img" src="imgs/heros/hero-banner-employer-advice-1-e1740482059223.webp" alt="Woman with phone" />
-        </div>
+        </div>          
       </div>
     </div>
   </section>
@@ -666,7 +718,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card h-100 shadow-sm">
                       <img src="imgs/badges/property.svg" class="card-img-top" alt="Property" />
                         <div class="card-body">
-                            <h3 class="card-title fs-5 text-cyan">Property</h3>
+                            <h3 class="card-title fs-5 text-cyan">Expert Guidance on Complex Property Tax</h3>
                             <p class="card-text balance">
                                 This is a complex area that often involves considering several different taxes. Whether it be a property business incorporation, settling property into trust to plan for inheritance tax, Family Investment Company share structures, VAT advice on property transactions, or SDLT advice, Croner-i’s My VIP Tax Team is able to support you.
                             </p>
@@ -677,7 +729,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card h-100 shadow-sm">
                       <img src="imgs/badges/exit-planning.svg" class="card-img-top" alt="Exit planning" />
                         <div class="card-body">
-                            <h3 class="card-title fs-5 text-navy">Exit planning</h3>
+                            <h3 class="card-title fs-5 text-navy">Strategic Exit Planning for Business Owners</h3>
                             <p class="card-text balance">
                                 This is a key life decision for many business owners. Typical exits can include - a sale to a third party, an earn out, a company purchase of own shares, a management buy-out, and sale to an employee ownership trust. Whatever your clients’ exit strategy, there will always be important tax and VAT considerations.
                             </p>
@@ -688,7 +740,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card h-100 shadow-sm">
                       <img src="imgs/badges/inheritance-tax-and-trusts.svg" class="card-img-top" alt="Inheritance tax and trusts" />
                       <div class="card-body">
-                            <h3 class="card-title fs-5 text-cyan">Inheritance tax and trusts</h3>
+                            <h3 class="card-title fs-5 text-cyan">Navigating Inheritance Tax and Trusts</h3>
                             <p class="card-text balance">
                                 Passing on wealth to the next generation is a highly important area. With the changes announced in the October 2024 budget, we have seen a huge demand for inheritance tax advice for farmers and owners of high value trading companies. With the pension changes and predictions for the forthcoming budget on 26 November 2025, we are certain that demand for inheritance tax advice will continue to rise.
                             </p>
@@ -699,7 +751,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card h-100 shadow-sm">
                       <img src="imgs/badges/restructuring.svg" class="card-img-top" alt="Restructuring" />
                         <div class="card-body">
-                            <h3 class="card-title fs-5 text-navy">Restructuring</h3>
+                            <h3 class="card-title fs-5 text-navy">Optimising Businesses with Corporate Restructuring</h3>
                             <p class="card-text balance">
                                 Having the right corporate structure is essential regardless of your client’s current position and aspirations. We provide a huge amount of restructuring advice and tax implementation for everything from putting in a new holding company to a return of capital demerger partition.
                             </p>
@@ -707,6 +759,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </div>
+            <!-- How to use a graphic instead of text arrows:
+                 Replace the text content (&#10094; and &#10095;) with an <img> tag.
+                 Example for previous button:
+                 <button class="carousel-button prev"><img src="imgs/arrows/prev-arrow.png" alt="Previous"></button>
+                 <button class="carousel-button next"><img src="imgs/arrows/next-arrow.png" alt="Next"></button>
+                 Ensure your images are appropriately sized and styled with CSS if needed.
+            -->
             <button class="carousel-button prev">&#10094;</button>
             <button class="carousel-button next">&#10095;</button>
         </div>
@@ -725,7 +784,141 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
 
-</main>
+  
+  <section class="py-5 bg-grey">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6 text-center">
+          <img class="value-img" src="imgs/heros/247-advice-high-1-e1740483166684.webp" alt="Expand Your Practice with Specialist Support" />
+        </div>
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3 text-navy">Grow Your Practice by Partnering With Our Specialist Accountant Service</h2>
+
+          <span class="d-block mb-3 text-cyan fs-5 fw-semibold">Is your inbox stacked high with complex tax planning work? Don’t let specialist cases slow you down.</span>
+          <div class="mb-4">
+            <ul class="list-unstyled">
+              <li><b>&#10003;</b> Property tax planning & restructuring</li>
+              <li><b>&#10003;</b> Exit strategies & succession</li>
+              <li><b>&#10003;</b> Inheritance tax & trusts</li>
+              <li><b>&#10003;</b> VAT, capital reliefs & more</li>
+            </ul>
+
+            <span class="d-block mb-3 text-cyan fs-5 fw-semibold">Let us handle specialist cases, so you can say yes to every client.</span>
+            <ul class="list-unstyled" style="color: var(--mid-dark-grey);">
+              <li class="mb-2">Offer advanced solutions: <strong>IR35, inheritance tax planning, capital goods scheme, business asset disposal relief</strong> and more</li>
+              <li class="mb-2">Retain and win high-value clients needing expertise outside your current scope</li>
+              <li class="mb-2">White-label or collaborate: seamless extension of your team</li>
+              <li class="mb-2">Confidential, accountant-to-accountant service - your client stays your client</li>
+            </ul>
+            <a onclick="gtag('event', 'conversion', {'send_to': 'AW-17544790194/cD9uCMzqwKYbELKBga5B'});" href="tel:02046343688" class="cta-btn d-inline-flex align-items-center">
+              <span class="me-2 d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                </svg>
+              </span>
+              Call Us NOW
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="bg-navy text-white pt-5">
+    <div class="container">
+      <div class="d-flex footer-main justify-content-between flex-wrap mb-4">
+        <div class="footer-col mb-4">
+          <h4 class="text-white">Contact</h4>
+          <div class="footer-contact-details">
+            <div><a onclick="gtag('event', 'conversion', {'send_to': 'AW-17544790194/cD9uCMzqwKYbELKBga5B'});" href="tel:02046343688" class="text-cyan text-decoration-underline">020 4634 3688</a></div>
+            <!-- <div><a href="mailto:advice@accountantadvice.co.uk" class="text-cyan text-decoration-underline">advice@accountantadvice.co.uk</a></div> -->
+            <div>Croner-i Limited,<br>240 Blackfriars Road,<br>London SE1 8NW</div>
+          </div>
+        </div>
+        <div class="footer-col mb-4">
+          <h4 class="text-white">About</h4>
+          <ul class="list-unstyled">
+            <li><a href="https://www.croneri.co.uk/disclaimer" class="text-cyan text-decoration-none">Disclaimer</a></li>
+            <li><a href="https://www.croneri.co.uk/fraudulent-websites" class="text-cyan text-decoration-none">Fraudulent Website Awareness</a></li>
+            <li><a href="https://www.croneri.co.uk/terms-conditions" class="text-cyan text-decoration-none">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col mb-4">
+          <h4 class="text-white">Policies</h4>
+          <ul class="list-unstyled">
+            <li><a href="https://www.accountantadvice.co.uk/cookies-policy" class="text-cyan text-decoration-none">Cookies Policy</a></li>
+            <li><a href="https://www.croneri.co.uk/gender-pay-gap-report" class="text-cyan text-decoration-none">Gender Pay Gap Report</a></li>
+            <li><a href="https://www.croneri.co.uk/privacy-policy" class="text-cyan text-decoration-none">Privacy Policy</a></li>
+            <li><a href="https://www.croneri.co.uk/section-172" class="text-cyan text-decoration-none">Section 172 Statement</a></li>
+          </ul>
+        </div>
+        <div class="footer-col mb-4">
+          <h4 class="text-white">Legal</h4>
+          <ul class="list-unstyled">
+            <li><a href="https://www.croneri.co.uk/criminal-finances-act-2017" class="text-cyan text-decoration-none">Criminal Finances Act 2017</a></li>
+            <li><a href="https://www.croneri.co.uk/gdpr-compliance-statement" class="text-cyan text-decoration-none">GDPR Compliance Statement</a></li>
+            <li><a href="https://www.croneri.co.uk/slavery-and-human-trafficking-statement" class="text-cyan text-decoration-none">Slavery and Human Trafficking Statement</a></li>
+            <li><a href="https://www.croneri.co.uk/workers-protection-act-policy" class="text-cyan text-decoration-none">Workers Protection Act Statement</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <a href="https://www.accountantadvice.co.uk" class="footer-brand"><img src="imgs/logos/accountant-advice-logo-2025-22.svg" alt="Accountant Advice Logo footer" /></a>
+        </div>
+        <div class="col-md-6 col-lg-3 offset-lg-6 text-md-start">
+          <p class="footer-copyright small text-white" >© 2025 Accountant Advice. All rights reserved.</p>
+          <p class="footer-copyright small" style="color: var(--mid-grey);">© 2025 Croner-i is authorised and regulated by the Financial Conduct Authority in respect of Insurance Mediation Services, Financial Services Register no. 951415.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+    
+<!-- Modal -->
+<div class="modal fade" id="phoneModal" tabindex="-1" aria-labelledby="phoneModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-navy" id="phoneModalLabel">We're available 24/7</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Get in touch with our experts and get your free consultation now.</p>
+        <p class="display-4 fw-bold text-red">020 4634 3688</p>
+        <p class="text-muted small">* Please note that we only provide advice to UK-based accountants and accountancy firms.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap 5 JS Bundle CDN (for interactive components if needed) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  /* make the phone links a modal for lager screens */
+  const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+
+  function updatePhoneLinks() {
+    if (window.innerWidth >= 576) {
+      phoneLinks.forEach(link => {
+        link.setAttribute('data-bs-toggle', 'modal');
+        link.setAttribute('data-bs-target', '#phoneModal');
+        link.removeAttribute('href');
+      });
+    } else {
+      phoneLinks.forEach(link => {
+        link.removeAttribute('data-bs-toggle');
+        link.removeAttribute('data-bs-target');
+        link.setAttribute('href', 'tel:02046343688');
+      });
+    }
+  }
+
+  updatePhoneLinks();
+  window.addEventListener('resize', updatePhoneLinks);
+</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
