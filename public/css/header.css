@@ -1,0 +1,67 @@
+
+/* Header Styles */
+
+.site-logo {
+    max-height: 56px;
+    width: auto;
+    min-width: 262px;
+    display: block;
+}
+
+.nav-phone {
+    display:inline-flex;
+    border-radius:50%;
+    align-items:center;
+    justify-content:center;
+    background:var(--red);
+    color: var(--white); 
+    width:3em;
+    height:3em;
+    box-shadow:0 1px 6px rgba(25,41,84,0.12);
+}
+
+.nav-phone:hover, 
+.nav-phone:focus  {
+    background:var(--cyan);
+    color: var(--white);
+}
+
+.nav-landbot-btn {
+    background: var(--cyan);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 1.1rem 2.2rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: background 0.18s;
+    text-decoration: none;
+    margin-right: 0.5rem; /* Reduced margin */
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    display: inline-block;
+  }
+  .nav-landbot-btn:hover, .nav-landbot-btn:focus {
+    background: var(--red);
+    color: var(--white);
+  }
+
+.nav-landbot {
+  display:inline-flex;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
+  background:var(--cyan);
+  color: var(--white); 
+  width:3em;
+  height:3em;
+  margin-right:1rem;
+  box-shadow:0 1px 6px rgba(25,41,84,0.12);
+}
+.nav-landbot:hover, 
+.nav-landbot:focus  {
+  background:var(--red);
+  color: var(--white);
+}

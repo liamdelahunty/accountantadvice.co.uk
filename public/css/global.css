@@ -1,0 +1,33 @@
+:root {
+      --white: #ffffff;
+      --navy: #192954;
+      --cyan: #00c0ff;
+      --red: #ff0042;
+      --reda: rgba(255, 0, 66, 0.08);
+      --grey: #f2f2f2;
+      --mid-dark-grey: #606060;
+      --mid-grey: #a7a9ab;
+      --dark-grey: #424143;
+      --shadow: 0 2px 16px rgba(25,41,84,0.08);
+      --rating-gold: #fbbc04;
+      --rating-color-hero: #ff0042;
+      --rating-zoom: 120%;
+      --rating-reviews-zoom: 90%;
+      --rating-grey: #dadce0; /* Google business profile grey #dadce0 */
+}
+.bg-navy { background-color: var(--navy) !important; }
+.text-cyan { color: var(--cyan) !important; }
+.text-dark-grey { color: var(--dark-grey) !important; }
+.text-grey { color: var(--grey) !important; }
+.text-mid-grey { color: var(--mid-grey) !important; }
+.text-navy { color: var(--navy) !important; }
+.text-red { color: var(--red) !important; }
+.bg-dark-grey { background-color: var(--dark-grey) !important; }
+.bg-cyan { background-color: var(--cyan) !important; }
+.site-logo { max-height: 56px; }
+.hero-img, .value-img, .seo-img { width: 100%; height: auto; border-radius: 1rem; }
+.hero-img { max-height: 600px; width: auto; }
+.balance { text-wrap: balance; }
+.pretty { text-wrap: pretty; }
+.hero-rating { max-height:24px; width: auto; }
+

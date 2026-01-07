@@ -1,0 +1,6 @@
+
+.mktoField,
+.mktoField textarea,
+.mktoField select {
+  width: 48% !important;
+}

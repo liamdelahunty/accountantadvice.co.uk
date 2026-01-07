@@ -117,7 +117,6 @@
       margin-bottom: 1rem;
       letter-spacing: 0.02em;
       display: inline-block;
-      
     }
     .rounded-outline-btn:hover,
     .rounded-outline-btn:focus {
@@ -158,7 +157,48 @@
     .nav-phone:focus  {
       background:var(--cyan);
       color: var(--white);
-    }      
+    }
+  .nav-landbot-btn {
+        background: var(--cyan);
+        color: var(--white);
+        font-weight: 700;
+        font-size: 1.15rem;
+        padding: 1.1rem 2.2rem;
+        border: none;
+        border-radius: 2rem;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        transition: background 0.18s;
+        text-decoration: none;
+        margin-right: 0.5rem; /* Reduced margin */
+        margin-bottom: 1rem;
+        letter-spacing: 0.02em;
+        display: inline-block;
+      }
+      .nav-landbot-btn:hover, .nav-landbot-btn:focus {
+        background: var(--red);
+        color: var(--white);
+      }
+
+    .nav-landbot {
+      display:inline-flex;
+      border-radius:50%;
+      align-items:center;
+      justify-content:center;
+      background:var(--cyan);
+      color: var(--white); 
+      width:3em;
+      height:3em;
+      margin-right:1rem;
+      box-shadow:0 1px 6px rgba(25,41,84,0.12);
+    }
+    .nav-landbot:hover, 
+    .nav-landbot:focus  {
+      background:var(--red);
+      color: var(--white);
+    }
+
+
     .footer-brand img {
       max-width: 260px;
       height: auto;
@@ -203,38 +243,76 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a name="top"></a>
 
 <header class="bg-navy py-3 border-bottom">
-  <div class="container d-flex align-items-center justify-content-between">
+  <div class="container d-flex align-items-center">
+
+    <!-- Logo – left -->
     <a href="https://www.accountantadvice.co.uk">
       <img src="imgs/logos/accountant-advice-logo-2025-22.svg"
-           alt="Accountant Advice Logo"
-           class="site-logo"
-           style="max-height: 56px; width: auto; min-width: 262px; display: block;" />
+        alt="Accountant Advice Logo"
+        class="site-logo"
+        style="max-height:56px;width:auto;min-width:262px;display:block;">
     </a>
-    <a href="landbot.html" class="d-none d-lg-inline cta-btn px-4 py-2 fw-bold me-2">
-      Book your chat with a consultant
-    </a>
-    <a onclick="gtag('event', 'conversion', {'send_to': 'AW-17544790194/cD9uCMzqwKYbELKBga5B'});" href="tel:02046343688" class="d-none d-lg-inline cta-btn px-4 py-2 fw-bold">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-      </svg>
-      020 4634 3688
-    </a>
-    <a onclick="gtag('event', 'conversion', {'send_to': 'AW-17544790194/cD9uCMzqwKYbELKBga5B'});" href="tel:02046343688"
-      class="d-inline d-lg-none"
-      aria-label="Call 020 4634 3688"
-      title="Call 020 4634 3688"
-      style="margin-left:auto;">
-      <span class="nav-phone">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+
+    <!-- Wrapper for the two desktop buttons – pushed to the right -->
+    <div class="ms-auto d-none d-lg-flex gap-2">
+      <!-- Book your chat button -->
+      <a href="landbot.html"
+        class="d-none d-lg-inline nav-landbot-btn px-4 py-2 fw-bold">
+        Book your chat with a consultant
+      </a>
+
+      <!-- Phone button -->
+      <a onclick="gtag('event','conversion',{'send_to':'AW-17544790194/cD9uCMzqwKYbELKBga5B'});"
+        href="tel:02046343688"
+        class="cta-btn px-4 py-2 fw-bold">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="var(--white)" class="bi bi-telephone-fill"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
         </svg>
-      </span>
-    </a>
+        020 4634 3688
+      </a>
+    </div>
+
+    <div class="ms-auto d-lg-none d-lg-flex gap-2">
+
+      <a href="landbot.html"
+       class="d-inline d-lg-none ms-auto"
+       aria-label="Open chat with a consultant"
+       title="Chat with a consultant"
+       style="margin-left:auto;">
+      <span class="nav-landbot">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="16" height="16"
+             fill="var(--white)"
+             class="bi bi-card-text"
+             viewBox="0 0 16 16">
+          <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+          <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/>
+        </svg>
+      </a>
+      <!-- Mobile‑only phone icon – appears on xs–sm screens -->
+      <a onclick="gtag('event','conversion',{'send_to':'AW-17544790194/cD9uCMzqwKYbELKBga5B'});"
+        href="tel:02046343688"
+        class="d-inline d-lg-none ms-auto"
+        aria-label="Call 020 4634 3688"
+        title="Call 020 4634 3688"
+        style="margin-left:auto;">
+        <span class="nav-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="var(--white)" class="bi bi-telephone-fill"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+          </svg>
+        </span>
+      </a>
+    </div>
   </div>
 </header>
 
 <main>
-
 <script SameSite="None; Secure" type="module" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs"></script>
 <div id="myLandbot" style="width: 100%; height: 500px"></div>
 <script type="module">
@@ -243,6 +321,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-3214745-V26JKHQAQ4P0UHQE/index.json',
   });
 </script>
+</main>
 
 <footer class="bg-navy text-white pt-5">
     <div class="container">

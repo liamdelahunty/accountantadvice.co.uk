@@ -37,501 +37,20 @@
   <!-- Bootstrap 5 CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
-    :root {
-      --white: #ffffff;
-      --navy: #192954;
-      --cyan: #00c0ff;
-      --red: #ff0042;
-      --reda: rgba(255, 0, 66, 0.08);
-      --grey: #f2f2f2;
-      --mid-dark-grey: #606060;
-      --mid-grey: #a7a9ab;
-      --dark-grey: #424143;
-      --shadow: 0 2px 16px rgba(25,41,84,0.08);
-      --rating-gold: #fbbc04;
-      --rating-color-hero: #ff0042;
-      --rating-zoom: 120%;
-      --rating-reviews-zoom: 90%;
-      --rating-grey: #dadce0; /* Google business profile grey #dadce0 */
-    }
-    .bg-navy { background-color: var(--navy) !important; }
-    .text-cyan { color: var(--cyan) !important; }
-    .text-dark-grey { color: var(--dark-grey) !important; }
-    .text-grey { color: var(--grey) !important; }
-    .text-mid-grey { color: var(--mid-grey) !important; }
-    .text-navy { color: var(--navy) !important; }
-    .text-red { color: var(--red) !important; }
-    .bg-dark-grey { background-color: var(--dark-grey) !important; }
-    .bg-cyan { background-color: var(--cyan) !important; }
-    .site-logo { max-height: 56px; }
-    .hero-img, .value-img, .seo-img { width: 100%; height: auto; border-radius: 1rem; }
-    .hero-img { max-height: 600px; width: auto; }
-    .balance { text-wrap: balance; }
-    .pretty { text-wrap: pretty; }
-    .hero-rating { max-height:24px; width: auto; }
-    .cta-btn {
-      background: var(--red);
-      color: var(--white);
-      font-weight: 700;
-      font-size: 1.15rem;
-      padding: 1.1rem 2.2rem;
-      border: none;
-      border-radius: 2rem;
-      cursor: pointer;
-      box-shadow: var(--shadow);
-      transition: background 0.18s;
-      text-decoration: none;
-      margin-right: 1rem;
-      margin-bottom: 1rem;
-      letter-spacing: 0.02em;
-      display: inline-block;
-    }
-    .cta-btn.secondary {
-      background: transparent;
-      border: 3px solid #ff0000;
-      color: var(--white);
-      border: none;
-    }
-    .cta-btn:hover, .cta-btn:focus {
-      background: #0099cc;
-      color: var(--white);
-    }
-    .cta-btn.secondary:hover, .cta-btn.secondary:focus {
-      background: #e6003a;
-      color: var(--white);
-    }
-    .rounded-outline-btn {
-      background: transparent;    
-      color: var(--white);            
-      font-weight: 700;
-      font-size: 1.15rem;
-      padding: 1.1rem 2.2rem;
-      border: 2px solid var(--red); 
-      border-radius: 2rem;        
-      cursor: pointer;
-      box-shadow: var(--shadow);
-      transition: background 0.18s;
-      text-decoration: none;
-      margin-right: 1rem;
-      margin-bottom: 1rem;
-      letter-spacing: 0.02em;
-      display: inline-block;
-      
-    }
-    .rounded-outline-btn:hover,
-    .rounded-outline-btn:focus {
-      background: var(--red);     /* Fill on hover/focus */
-      color: var(--white);             /* Text color on hover (navy) */
-      border-color: var(--white);      /* Slightly darker border */
-      outline: none;
-    }
-    .btn-tertiary {
-      color: var(--dark-grey);
-    }
-    .btn-tertiary:hover,
-    .btn-tertiary:focus {
-      color: var(--white);
-      border-color: var(--dark-grey);
-    }
-    .logos .logo-placeholder {
-      display: inline-block;
-      width: 80px;
-      height: 40px;
-      background: #ddd;
-      margin: 0 1rem 1rem 0;
-      border-radius: 8px;
-    }
-    .form-inner { max-width: 520px; margin: 0 auto; }
-    .nav-phone {
-      display:inline-flex;
-      border-radius:50%;
-      align-items:center;
-      justify-content:center;
-      background:var(--red);
-      color: var(--white); 
-      width:3em;
-      height:3em;
-      box-shadow:0 1px 6px rgba(25,41,84,0.12);
-    }
-    .nav-phone:hover, 
-    .nav-phone:focus  {
-      background:var(--cyan);
-      color: var(--white);
-    }      
-    .footer-brand img {
-      max-width: 260px;
-      height: auto;
-      background: none;
-      border-radius: 0.4em;
-      display: block;
-      left: 0px;
-    }
 
-    /* Responsive tweak for footer columns and logo centering */
-    @media (max-width: 991.98px) {
-      .footer-brand {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        text-align: center !important;
-        justify-content: center !important;
-        width: 100% !important;
-        flex-basis: 100%;
-        display: flex !important;
-      }
-      .footer-brand img {
-        max-width: 110px;
-        max-height: 46px;
-      }
-      .footer-copyright {
-        margin-top: 2rem;
-        text-align: center;
-      }
-    }
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/marketo-form-v1.css">
+  <link rel="stylesheet" href="css/marketo-form.css">
+  <link rel="stylesheet" href="css/rating.css">
+  <link rel="stylesheet" href="css/two-column-form.css">
 
-.rating-zoom {
-  zoom: var(--rating-zoom);
-}
-.rating-reviews-zoom {
-  zoom: var(--rating-reviews-zoom);
-}
-
-.grating {
-  font-family: Ariel, sans-serif;
-}
-
-.gstars .gstarsgrad { 
-    color: var(--rating-color);
-    clip-path: polygon(6px 0, 4.31px 3.98px, 0 4.34px, 3.28px 7.18px, 2.29px 11.4px, 6px 9.16px, 9.71px 11.4px, 8.72px 7.18px, 12px 4.34px, 7.69px 3.98px, 6px 0, 20px 0, 18.31px 3.98px, 14px 4.34px, 17.28px 7.18px, 16.29px 11.4px, 20px 9.16px, 23.71px 11.4px, 22.72px 7.18px, 26px 4.34px, 21.69px 3.98px, 20px 0, 34px 0, 32.31px 3.98px, 28px 4.34px, 31.28px 7.18px, 30.29px 11.4px, 34px 9.16px, 37.71px 11.4px, 36.72px 7.18px, 40px 4.34px, 35.69px 3.98px, 34px 0, 48px 0, 46.31px 3.98px, 42px 4.34px, 45.28px 7.18px, 44.29px 11.4px, 48px 9.16px, 51.71px 11.4px, 50.72px 7.18px, 54px 4.34px, 49.69px 3.98px, 48px 0, 62px 0, 60.31px 3.98px, 56px 4.34px, 59.28px 7.18px, 58.29px 11.4px, 62px 9.16px, 65.71px 11.4px, 64.72px 7.18px, 68px 4.34px, 63.69px 3.98px, 62px 0);
-    display: inline-block;
-    zoom: var(--rating-zoom);
-    width: 70px;  /* 68px; */
-    height: 11.4px; /* 11.4px; */
-  }
-
-.gstars {
-    display: inline-block;
-}
-
-
-.carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-card {
-    flex: 0 0 100%;
-    padding: 0 15px;
-}
-
-.card-body {
-  background-color: var(--grey);
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-    .carousel-card {
-        flex: 0 0 50%;
-    }
-}
-
-@media (min-width: 992px) {
-    .carousel-card {
-        flex: 0 0 25%;
-    }
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 15px; /* Increased padding for larger buttons */
-    font-size: 24px; /* Increased font size for larger arrows */
-    cursor: pointer;
-    z-index: 1;
-}
-
-.carousel-button.prev {
-    left: 0px;
-}
-
-.carousel-button.next {
-    right: 0px;
-}
-
-
-
-/* Marketo form styled to resemble Bootstrap 5 forms and match custom button */
-
-/* Form container styling */
-.mktoForm {
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: none;
-  color: var(--navy, #192954);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
-  margin: 0 auto;
-  width: 100% !important;
-  max-width: 100% !important;
-  padding: 2rem 1.5rem;
-  box-sizing: border-box;
-}
-
-/* Two-column layout for form fields */
-.mktoForm .mktoFormRow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.mktoForm .mktoFieldWrap {
-    width: 48%;
-    margin-bottom: 1rem;
-}
-
-@media (max-width: 767px) {
-  .mktoForm .mktoFieldWrap {
-    width: 100%;
-  }
-}
-
-/* Ensure wrappers and fields are full width and NO extra spacing */
-.mktoFormRow,
-.mktoFieldDescriptor,
-.mktoFormCol,
-.mktoGutter,
-.mktoOffset,
-.mktoForm td,
-.mktoForm tr {
-  width: 100% !important;
-  max-width: 100% !important;
-  min-width: 0 !important;
-  float: none !important;
-  display: block !important;
-  box-sizing: border-box;
-  margin: 0 !important;
-  padding: 0 !important;
-  height: auto !important;
-  min-height: 0 !important;
-}
-
-/* Tighter field spacing */
-.mktoField,
-.mktoField textarea,
-.mktoField select {
-  margin-bottom: 1rem  !important;
-  padding-bottom: 0 !important;
-}
-
-/* Table spacing fix */
-.mktoForm table {
-  border-spacing: 0 !important;
-  border-collapse: collapse !important;
-}
-
-/* Hide labels and asterisks */
-.mktoLabel,
-.mktoAsterix {
-  display: none !important;
-}
-.mktoRequiredField .mktoLabel::after {
-  content: none !important;
-}
-
-/* Form fields styling */
-.mktoField,
-.mktoField textarea,
-.mktoField select {
-  background: #fff !important;
-  border-radius: 0.375rem !important;
-  border: 1px solid #ced4da !important;
-  color: var(--navy, #192954) !important;
-  font-size: 1rem !important;
-  line-height: 1.5 !important;
-  outline: none !important;
-  padding: 0.5rem 0.9rem !important;
-  transition: border-color 0.15s, box-shadow 0.15s;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  display: block !important;
-}
-.mktoField textarea {
-  resize: vertical !important;
-  min-height: 80px !important;
-}
-.mktoField select {
-  min-height: 2.5em !important;
-}
-.mktoField:focus,
-.mktoField textarea:focus,
-.mktoField select:focus {
-  border-color: #86b7fe !important;
-  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.18) !important;
-}
-
-/* Error message styling */
-.mktoForm .mktoError {
-  color: var(--red) !important;
-  font-size: 0.95rem !important;
-  margin-top: 0.3rem !important;
-}
-
-/* Button row and button styling */
-.mktoForm .mktoButtonRow {
-    width: 100%; /* Ensure button spans full width */
-    text-align: center; /* Center the button */
-    margin-top: 1rem; /* Add some space above the button */
-}
-.mktoForm .mktoButton {
-  background: transparent !important;
-  color: var(--navy, #192954) !important;
-  font-weight: 700 !important;
-  font-size: 1.15rem !important;
-  padding: 1.1rem 2.2rem !important;
-  border: 2px solid var(--red, #ff0042) !important;
-  border-radius: 2rem !important;
-  cursor: pointer !important;
-  box-shadow: var(--shadow, 0 2px 16px rgba(25,41,84,0.08)) !important;
-  transition: background 0.18s, border-color 0.18s !important;
-  text-decoration: none !important;
-  margin-bottom: 0.2 !important;
-  letter-spacing: 0.02em !important;
-  display: block !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-.mktoForm .mktoButton:hover,
-.mktoForm .mktoButton:focus {
-  background: var(--red, #ff0042) !important;
-  color: var(--white, #fff) !important;
-  border-color: var(--white, #fff) !important;
-  outline: none !important;
-}
-
-/* Hide mktoClear */
-.mktoClear {
-  display: none !important;
-  height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border: none !important;
-  line-height: 0 !important;
-}
-
-/* Checkbox and radio styling for Bootstrap look */
-.mktoForm input[type="checkbox"],
-.mktoForm input[type="radio"] {
-  accent-color: #0d6efd !important;
-  width: 1.1em !important;
-  height: 1.1em !important;
-  vertical-align: middle !important;
-  margin-right: 0.4em !important;
-}
-.mktoForm .mktoCheckboxList,
-.mktoForm .mktoRadioList {
-  margin: 0.3em 0 0.6em 0 !important;
-  padding: 0 !important;
-  list-style: none !important;
-  font-size: 1rem !important;
-  color: var(--navy, #192954) !important;
-}
-
-/* Responsive adjustments for mobile */
-@media (max-width: 600px) {
-  .mktoForm {
-    padding: 1rem 0.5rem !important;
-    border-radius: 0.5rem !important;
-    box-shadow: none !important;
-  }
-  .mktoFormRow {
-    margin-bottom: 0.6rem !important;
-  }
-  .mktoForm .mktoButton {
-    font-size: 1rem !important;
-    padding: 0.9rem 1.2rem !important;
-  }
-}
-
-.mktoFormRow:has(input[type="hidden"]:only-child) {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  height: 0 !important;
-  min-height: 0 !important;
-  display: none !important;
-}
-.mktoForm input[type="hidden"].mktoField {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  height: 0 !important;
-  display: none !important;
-}
-
-/* Modern Marketo error styling for field validation messages */
-.mktoError {
-  position: static !important;               /* Remove absolute positioning */
-  display: block !important;
-  background: var(--reda) !important;            /* Pale red background for error */
-  color: var(--red) !important;                 /* Bootstrap danger red */
-  border: 1px solid var(--red) !important;
-  border-radius: 0.375rem !important;        /* Rounded corners */
-  box-shadow: 0 1px 8px rgba(220,53,69,0.07) !important;
-  font-size: 0.9rem !important;
-  margin-top: 0.5rem !important;             /* Space above error */
-  margin-bottom: 0.5rem !important;          /* Space below error */
-  padding: 0.6rem 1rem !important;           /* Padding for readability */
-  z-index: 10 !important;
-  max-width: 100% !important;
-  width: auto !important;
-  box-sizing: border-box !important;
-}
-
-.mktoErrorArrowWrap,
-.mktoErrorArrow {
-  display: none !important;                  /* Hide triangle arrow, use box style */
-}
-
-.mktoErrorMsg {
-  font-weight: 500 !important;
-  color: var(--red) !important;
-  background: transparent !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-}
-
-.mktoError[role="alert"] {
-  outline: none !important;
-  /* For accessibility, you may want to add a colored left border */
-  border-left: 4px solid var(--red) !important;
-}
-
-/* Responsive adjustments for small screens */
-@media (max-width: 600px) {
-  .mktoError {
-    font-size: 1rem !important;
-    padding: 0.7rem 0.6rem !important;
-    margin-top: 0.4rem !important;
-    margin-bottom: 0.4rem !important;
-  }
-}
-
-
-
-  </style>
 
 
 </head>
@@ -543,32 +62,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a name="top"></a>
 
 <header class="bg-navy py-3 border-bottom">
-  <div class="container d-flex align-items-center justify-content-between">
+  <div class="container d-flex align-items-center">
+
+    <!-- Logo – left -->
     <a href="https://www.accountantadvice.co.uk">
       <img src="imgs/logos/accountant-advice-logo-2025-22.svg"
-           alt="Accountant Advice Logo"
-           class="site-logo"
-           style="max-height: 56px; width: auto; min-width: 262px; display: block;" />
+        alt="Accountant Advice Logo"
+        class="site-logo"
+        style="max-height:56px;width:auto;min-width:262px;display:block;">
     </a>
-    <a onclick="gtag('event', 'conversion', {'send_to': 'AW-17544790194/cD9uCMzqwKYbELKBga5B'});" href="tel:02046343688" class="d-none d-lg-inline cta-btn px-4 py-2 fw-bold">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-      </svg>
-      020 4634 3688
-    </a>
-    <a onclick="gtag('event', 'conversion', {'send_to': 'AW-17544790194/cD9uCMzqwKYbELKBga5B'});" href="tel:02046343688"
-      class="d-inline d-lg-none"
-      aria-label="Call 020 4634 3688"
-      title="Call 020 4634 3688"
-      style="margin-left:auto;">
-      <span class="nav-phone">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+
+    <!-- Wrapper for the two desktop buttons – pushed to the right -->
+    <div class="ms-auto d-none d-lg-flex gap-2">
+      <!-- Book your chat button -->
+      <a href="consultancy-for-accountants.html"
+        class="d-none d-lg-inline nav-landbot-btn px-4 py-2 fw-bold">
+        Book your chat with a consultant
+      </a>
+
+      <!-- Phone button -->
+      <a onclick="gtag('event','conversion',{'send_to':'AW-17544790194/cD9uCMzqwKYbELKBga5B'});"
+        href="tel:02046343688"
+        class="cta-btn px-4 py-2 fw-bold">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="var(--white)" class="bi bi-telephone-fill"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
         </svg>
-      </span>
-    </a>
+        020 4634 3688
+      </a>
+    </div>
+
+    <div class="ms-auto d-lg-none d-lg-flex gap-2">
+
+      <a href="consultancy-for-accountants.html"
+       class="d-inline d-lg-none ms-auto"
+       aria-label="Open chat with a consultant"
+       title="Chat with a consultant"
+       style="margin-left:auto;">
+      <span class="nav-landbot">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="16" height="16"
+             fill="var(--white)"
+             class="bi bi-card-text"
+             viewBox="0 0 16 16">
+          <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+          <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/>
+        </svg>
+      </a>
+      <!-- Mobile‑only phone icon – appears on xs–sm screens -->
+      <a onclick="gtag('event','conversion',{'send_to':'AW-17544790194/cD9uCMzqwKYbELKBga5B'});"
+        href="tel:02046343688"
+        class="d-inline d-lg-none ms-auto"
+        aria-label="Call 020 4634 3688"
+        title="Call 020 4634 3688"
+        style="margin-left:auto;">
+        <span class="nav-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="var(--white)" class="bi bi-telephone-fill"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+          </svg>
+        </span>
+      </a>
+    </div>
   </div>
 </header>
+
 
   <section class="py-5 bg-navy text-white">
     <div class="container">
@@ -609,7 +171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         </div>
         <div class="col-lg-6 d-none d-lg-block text-center">
-          <img class="hero-img" src="imgs/heros/hero-banner-employer-advice-1-e1740482059223.webp" alt="Woman with phone" />
+            <img src="imgs/heros/accountant-holding-phone-bubble.webp" alt="Accountant getting advice" class="hero-img">
         </div>
       </div>
     </div>
@@ -915,7 +477,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="https://www.accountantadvice.co.uk" class="footer-brand"><img src="imgs/logos/accountant-advice-logo-2025-22.svg" alt="Accountant Advice Logo footer" /></a>
         </div>
         <div class="col-md-6 col-lg-3 offset-lg-6 text-md-start">
-          <p class="footer-copyright small text-white" >© 2025 Accountant Advice. All rights reserved.</p>
+          <p class="footer-copyright small" style="color: var(--mid-grey);">© 2025  Accountant Advice. All rights reserved.</p>
           <p class="footer-copyright small" style="color: var(--mid-grey);">© 2025 Croner-i is authorised and regulated by the Financial Conduct Authority in respect of Insurance Mediation Services, Financial Services Register no. 951415.</p>
         </div>
       </div>

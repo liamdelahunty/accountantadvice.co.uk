@@ -1,0 +1,64 @@
+
+.cta-btn {
+    background: var(--red);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 1.1rem 2.2rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: background 0.18s;
+    text-decoration: none;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    display: inline-block;
+}
+.cta-btn.secondary {
+    background: transparent;
+    border: 3px solid #ff0000;
+    color: var(--white);
+    border: none;
+}
+.cta-btn:hover, .cta-btn:focus {
+    background: #0099cc;
+    color: var(--white);
+}
+.cta-btn.secondary:hover, .cta-btn.secondary:focus {
+    background: #e6003a;
+    color: var(--white);
+}
+.rounded-outline-btn {
+    background: transparent;    
+    color: var(--white);            
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 1.1rem 2.2rem;
+    border: 2px solid var(--red); 
+    border-radius: 2rem;        
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: background 0.18s;
+    text-decoration: none;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    display: inline-block;
+}
+.rounded-outline-btn:hover,
+.rounded-outline-btn:focus {
+    background: var(--red);     /* Fill on hover/focus */
+    color: var(--white);             /* Text color on hover (navy) */
+    border-color: var(--white);      /* Slightly darker border */
+    outline: none;
+}
+.btn-tertiary {
+    color: var(--dark-grey);
+}
+.btn-tertiary:hover,
+.btn-tertiary:focus {
+    color: var(--white);
+    border-color: var(--dark-grey);
+}
