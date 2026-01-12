@@ -1,3 +1,4 @@
+.form-inner { max-width: 520px; margin: 0 auto; }
 
 /* Marketo form styled to resemble Bootstrap 5 forms and match custom button */
 
@@ -239,4 +240,45 @@
     margin-top: 0.4rem !important;
     margin-bottom: 0.4rem !important;
   }
+}
+
+/* TWO-COLUMN LAYOUT STYLES */
+
+/* Apply a two-column grid layout to the form */
+.mktoForm {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0 1rem !important; /* 0 for row gap, 1rem for column gap */
+}
+
+/* Make form rows span both columns by default */
+.mktoForm .mktoFormRow {
+  grid-column: span 2 !important;
+  display: contents !important; /* Allow children to be grid items */
+}
+
+/* For fields that should be side-by-side, make them direct grid items */
+.mktoForm .mktoFormCol {
+  grid-column: auto !important; /* Let the grid place it */
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Style the field wrappers to stack elements correctly */
+.mktoForm .mktoFieldWrap {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+/* Ensure individual form fields take up the full width of their column */
+.mktoForm .mktoField {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Make the button span both columns */
+.mktoForm .mktoButtonRow {
+  grid-column: span 2 !important;
+  margin-top: 1rem !important;
 }
