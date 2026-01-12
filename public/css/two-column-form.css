@@ -1,20 +1,40 @@
+/* public/css/two-column-form.css */
 
-.form-container .mktoFormRow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+/* Apply a two-column grid layout to the form */
+.mktoForm {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0 1rem !important; /* 0 for row gap, 1rem for column gap */
 }
-.form-container .mktoFieldWrap {
-    width: 48%;
-    margin-bottom: 1rem;
+
+/* Make form rows span both columns by default */
+.mktoForm .mktoFormRow {
+  grid-column: span 2 !important;
+  display: contents !important; /* Allow children to be grid items */
 }
-@media (max-width: 767px) {
-    .form-container .mktoFieldWrap {
-    width: 100%;
-    }
+
+/* For fields that should be side-by-side, make them direct grid items */
+.mktoForm .mktoFormCol {
+  grid-column: auto !important; /* Let the grid place it */
+  padding: 0 !important;
+  margin: 0 !important;
 }
-.form-container .mktoButtonRow {
-    width: 100%; /* Ensure button spans full width */
-    text-align: center; /* Center the button */
-    margin-top: 1rem; /* Add some space above the button */
+
+/* Style the field wrappers to stack elements correctly */
+.mktoForm .mktoFieldWrap {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+/* Ensure individual form fields take up the full width of their column */
+.mktoForm .mktoField {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Make the button span both columns */
+.mktoForm .mktoButtonRow {
+  grid-column: span 2 !important;
+  margin-top: 1rem !important;
 }
